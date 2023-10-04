@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.PozhdinAA.Sprint2.Task0.V26.Lib;
+using Tyuiu.PozhdinAA.Sprint2.Task1.V28.Lib;
 
-namespace Tyuiu.PozhdinAA.Sprint2.Task0.V26
+namespace Tyuiu.PozhdinAA.Sprint2.Task1.V28
 {
     class Program
     {
@@ -14,33 +14,37 @@ namespace Tyuiu.PozhdinAA.Sprint2.Task0.V26
         {
             DataService ds = new DataService();
 
-            int x = 1045;
-            int y = 975;
+            int a = 247;
+            int b = 654;
+            int c = 671;
+            int d = 671;
             bool[] res = new bool[6];
-            res = ds.GetCompareOperations(x, y);
+            res = ds.GetLogicOperations(a, b, c, d);
 
             Console.Title = "Спринт #2 | Выполнил: Пождин А. А. | АСОиУБ-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
-            Console.WriteLine("* Тема: Операции сравнения                                                *");
-            Console.WriteLine("* Задание #0                                                              *");
-            Console.WriteLine("* Вариант #26                                                             *");
+            Console.WriteLine("* Тема: Логические операции                                               *");
+            Console.WriteLine("* Задание #1                                                              *");
+            Console.WriteLine("* Вариант #28                                                             *");
             Console.WriteLine("* Выполнил: Пождин Александр Андреевич | АСОиУБ-23-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу из операций сравнений (==, !=, <, >, <=, >=,         *");
-            Console.WriteLine("* последовательность операций не должна нарушаться) и арифметических      *");
-            Console.WriteLine("* выражений, которая вернет логическую последовательность(массив):        *");
-            Console.WriteLine("* (False, False, False, True, True, True), при x = 1045, y = 975.         *");
+            Console.WriteLine("* последовательность можно чередовать, но использовать один раз в         *");
+            Console.WriteLine("* выражении) и логических операций (|, &, ||, &&, !, ^, последовательность*");
+            Console.WriteLine("* операций не должна нарушаться), а также арифметических  выражений,      *");
+            Console.WriteLine("* которая вернет логическую последовательность(массив): (True, False,     *");
+            Console.WriteLine("* True, False, True, False), при a = 247, b = 654, c = 671, d = 671       *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("X = " + x);
-            Console.WriteLine("Y = " + y);
-
-
+            Console.WriteLine("a = " + a);
+            Console.WriteLine("b = " + b);
+            Console.WriteLine("c = " + c);
+            Console.WriteLine("d = " + d);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
@@ -50,7 +54,6 @@ namespace Tyuiu.PozhdinAA.Sprint2.Task0.V26
             {
                 Console.WriteLine(res[i]);
             }
-
             Console.ReadKey();
         }
     }
