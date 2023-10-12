@@ -22,7 +22,7 @@ namespace Tyuiu.PozhdinAA.Sprint2.Task3.V25
             Console.WriteLine("* Тема:  Вложенные операторы if - else                                    *");
             Console.WriteLine("* Задание #3                                                              *");
             Console.WriteLine("* Вариант #25                                                             *");
-            Console.WriteLine("* Выполнил: Пождин Александр Андреевич | АСОиУБ-23-1                     *");
+            Console.WriteLine("* Выполнил: Пождин Александр Андреевич | АСОиУБ-23-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Написать программу, которая вычисляет требуемое значение функции Y      *");
