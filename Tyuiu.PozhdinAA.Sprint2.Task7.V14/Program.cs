@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.PozhdinAA.Sprint2.Task6.V1.Lib;
+using Tyuiu.PozhdinAA.Sprint2.Task7.V14.Lib;
 
-namespace Tyuiu.PozhdinAA.Sprint2.Task6.V1
+namespace Tyuiu.PozhdinAA.Sprint2.Task7.V14
 {
     class Program
     {
@@ -16,37 +16,44 @@ namespace Tyuiu.PozhdinAA.Sprint2.Task6.V1
             Console.Title = "Спринт #2 | Выполнил: Пождин А. А. | АСОиУБ-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #2                                                               *");
-            Console.WriteLine("* Тема: Алгоритмы разветвляющейся структуры                               *");
-            Console.WriteLine("* Задание #6                                                              *");
-            Console.WriteLine("* Вариант #1                                                              *");
+            Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
+            Console.WriteLine("* Задание #7                                                              *");
+            Console.WriteLine("* Вариант #14                                                             *");
             Console.WriteLine("* Выполнил: Пождин Александр Андреевич | АСОиУБ-23-1                      *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая использует оператор switch вычисляет        *");
-            Console.WriteLine("* требуемое значение и возвращает результат.                              *");
-            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("* Написать программу на C#, которая запрашивает исходные данные           *");
+            Console.WriteLine("* (вещественные значения) и вычисляет, находится ли точка                 *");
+            Console.WriteLine("* с координатами X,Y в заштрихованной области.                             *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите номер месяца: ");
-            int numMonth = Convert.ToInt32(Console.ReadLine());
+            bool res;
 
-            string res;
-            if ((numMonth < 1) || (numMonth > 12))
-            {
-                res = "Введено неверное значение!";
-            }
-            else
-            {
-                res = "В этом месяце " + ds.FindMonthDaysCount(numMonth) + " дней";
-            }
+            double x;
+            double y;
+
+            Console.WriteLine("Введите координату X: ");
+            x = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введите координату Y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine(res);
+            res = ds.CheckDotInShadedArea(x, y);
+            if (res)
+            {
+                Console.WriteLine("Точка находится в зашрихованной области");
+            }
+            else
+            {
+                Console.WriteLine("Точка не находится в зашрихованной области");
+            }
             Console.ReadKey();
         }
     }
